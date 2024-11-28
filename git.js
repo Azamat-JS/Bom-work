@@ -53,14 +53,21 @@ screenSize.addEventListener("click", function(evt) {
 locationLi.addEventListener("click", function(evt) {
   evt.preventDefault()
 footer.style.display = "block"
-  window.navigator.geolocation.watchPosition((position) => {
-    console.log(position.coords);
-  
-  }, (error) => {
-    console.error(error)
-    
-  })
-})
+window.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  if (evt.target.closest(".hero-location-item") !== null) {
+      navigator.geolocation.getCurrentPosition((position) => {
+          openGoogleMaps(position.coords.latitude, position.coords.longitude);
+          function openGoogleMaps(latitude, longitude) {
+            if (latitude && longitude) {
+              const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+              window.open(url, "_blank");
+              footer.style.display = "block";
+              elText.textContent =
+                "Please wait... your request is being recycled";       
+  }}})
+    }
+  })})
 
 exitBtn.addEventListener("click", function(evt) {
 
