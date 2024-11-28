@@ -1,0 +1,67 @@
+*{
+    font-family: Encode Sans Semi Expanded;
+    background-color: rgba(179, 200, 175, 0.892);
+}
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+.header {
+  margin-top: 70px;
+}
+.header-inner {
+}
+.header-title {
+  font-size: 50px;
+}
+.hero-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style-type: none;
+  align-self: center;
+  padding: 20px;
+}
+img {
+  height: 250px;
+  width: 250px;
+  background-color: rgb(146, 145, 147); 
+}
+.item-info {
+  font-size: 40px;
+  background-color: rgb(146, 145, 147); 
+}
+li {
+  background-color: rgb(146, 145, 147);
+  width: 35%;
+  height: 420px;
+  border-radius: 20px;
+  padding-top: 20px;
+}
+.footer {
+    height: 240px;
+    width: 1200px;
+    background-color: rgb(147, 171, 85);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.information {
+    background-color: rgb(147, 171, 85);
+    font-size: 30px;
+}
+.exit {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(147, 171, 85);
+    justify-self: right;
+}
+.footer-inner {
+    background-color: rgb(147, 171, 85);
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
