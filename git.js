@@ -6,7 +6,7 @@ const exitBtn = document.querySelector(".exit")
 const info = document.querySelector(".information")
 const screenSize = document.querySelector(".hero-screen-size-item")
 const footer = document.querySelector(".footer")
-
+const elDate = document.querySelector(".hero-date-item")
   footer.style.display = "none"
 
 batteryLi.addEventListener("click", function(evt) {
@@ -85,4 +85,15 @@ window.addEventListener("keydown", function(evt){
   if(evt.key === "Enter"){
       footer.style.display = "block"
   }
+})
+
+
+elDate.addEventListener("click", function(evt) {
+  evt.preventDefault()
+
+  info.textContent = `Current time: ${new Date().getDay()}:${new Date().getMonth()}:${new Date().getFullYear()}`
+  info.style.fontFamily = "Calibri"
+  info.style.color = "blue"
+  info.style.fontSize = "3.5rem"
+  footer.style.display = "block"
 })
